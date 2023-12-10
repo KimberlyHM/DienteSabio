@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco_fondo"
+    android:onClick="ingresar_datos"
+    android:orientation="vertical"
+    tools:context=".Editar_perfi">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingTop="36dp"
+        android:paddingRight="36dp">
+
+        <TextView
+            android:id="@+id/tv_sesion"
+            style="@style/txt_titol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azul_fondo_inicio"
+            android:text="@string/cuenta" />
+
+        <Button
+            android:id="@+id/btn_cerrar"
+            style="@style/txt_contenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blanco_fondo"
+            android:gravity="left"
+            android:onClick="ingresar_datos"
+            android:padding="10dp"
+            android:text="@string/cerrar_cuenta" />
+
+        <Button
+            android:id="@+id/btn_eliminar"
+            style="@style/txt_contenido"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blanco_fondo"
+            android:gravity="left"
+            android:onClick="ingresar_datos"
+            android:padding="10dp"
+            android:text="@string/eliminar_cuenta" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:id="@+id/tv_modo_oscuro"
+            style="@style/txt_titol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azul_fondo_inicio"
+            android:text="@string/Modo_oscuro" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            style="@style/txt_contenido"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/Modo_oscuro" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="24dp" />
+
+        <TextView
+            android:id="@+id/tv_ayuda"
+            style="@style/txt_titol"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azul_fondo_inicio"
+            android:text="@string/ayuda" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp"
+        android:paddingBottom="36dp">
+
+        <Button
+            android:id="@+id/btn_regresar"
+            style="@style/txt_extra"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/blanco_fondo"
+            android:gravity="center|right"
+            android:onClick="regresar"
+            android:text="@string/regresar"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/azul_barra"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/im_btn_guardado"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/azul_barra"
+                android:onClick="ir_guardados"
+                android:src="@drawable/bookmarks_40px"
+                app:tint="@color/blanco_fondo"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/img_btn_inicio"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/azul_barra"
+                android:onClick="inicio"
+                android:src="@drawable/home_40px"
+                app:tint="@color/blanco_fondo"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/img_btn_buscar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/azul_barra"
+                android:onClick="ir_buscar"
+                android:src="@drawable/search_40px"
+                app:tint="@color/blanco_fondo"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

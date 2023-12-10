@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul_fondo_inicio"
+    android:orientation="vertical"
+    tools:context=".Crear_perfil">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingTop="36dp"
+        android:paddingRight="36dp">
+
+        <TextView
+            android:id="@+id/ev_nombre"
+            style="@style/txt_formulario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/nombre_reg" />
+
+        <EditText
+            android:id="@+id/et_nombre"
+            style="@style/txt_contenido"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:autofillHints=""
+            android:background="@color/crema_rellenar"
+            android:ems="10"
+            android:hint="@string/nombre_reg"
+            android:inputType="text"
+            android:padding="5dp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/ev_apellido"
+            style="@style/txt_formulario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/apellido_reg" />
+
+        <EditText
+            android:id="@+id/et_apellido"
+            style="@style/txt_contenido"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:autofillHints=""
+            android:background="@color/crema_rellenar"
+            android:ems="10"
+            android:hint="@string/apellido_reg"
+            android:inputType="text"
+            android:padding="5dp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/ev_email"
+            style="@style/txt_formulario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/email" />
+
+        <EditText
+            android:id="@+id/et_email"
+            style="@style/txt_contenido"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:autofillHints=""
+            android:background="@color/crema_rellenar"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="text"
+            android:padding="5dp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/tv_contra"
+            style="@style/txt_formulario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/contraseña" />
+
+        <EditText
+            android:id="@+id/et_contra"
+            style="@style/txt_contenido"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:autofillHints=""
+            android:background="@color/crema_rellenar"
+            android:ems="10"
+            android:hint="@string/contraseña"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <TextView
+            android:id="@+id/tv_rein_contra"
+            style="@style/txt_formulario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/contra_reg" />
+
+        <EditText
+            android:id="@+id/et_rein_contra"
+            style="@style/txt_contenido"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:autofillHints=""
+            android:background="@color/crema_rellenar"
+            android:ems="10"
+            android:hint="@string/contraseña"
+            android:inputType="textPassword"
+            android:padding="5dp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <Button
+            android:id="@+id/btn_registrar_datos"
+            style="@style/txt_boton_amarillo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical|end"
+            android:background="@color/azul_boton"
+            android:gravity="center"
+            android:onClick="elegir_perfil"
+            android:text="@string/registro" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="7"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp">
+
+        <Button
+            android:id="@+id/btn_regresar"
+            style="@style/txt_extra"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/azul_fondo_inicio"
+            android:gravity="right"
+            android:onClick="regresar"
+            android:text="@string/regresar" />
+    </LinearLayout>
+</LinearLayout>

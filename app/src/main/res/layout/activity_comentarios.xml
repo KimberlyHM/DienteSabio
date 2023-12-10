@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco_fondo"
+    android:orientation="vertical"
+    android:paddingTop="36dp"
+    tools:context=".Comentarios">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp"
+        android:paddingBottom="36dp">
+
+        <TextView
+            android:id="@+id/tv_buenos"
+            style="@style/txt_titol"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:text="@string/comentarios" />
+
+        <TextView
+            android:id="@+id/textView"
+            style="@style/txt_contenido"
+            android:layout_width="300dp"
+            android:layout_height="250dp"
+            android:layout_weight="1"
+            android:background="@color/crema_fondo"
+            android:gravity="center"
+            android:text="@string/comentarios" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_cancelar"
+                style="@style/txt_boton"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@color/crema_fondo"
+                android:onClick="regresar"
+                android:text="@string/cancelar" />
+
+            <Button
+                android:id="@+id/button2"
+                style="@style/txt_boton_amarillo"
+                android:layout_width="wrap_content"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@color/azul_boton"
+                android:onClick="regresar"
+                android:text="@string/enviar" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp"
+        android:paddingBottom="36dp"
+        tools:ignore="RtlHardcoded">
+
+        <Button
+            android:id="@+id/btn_regresar"
+            style="@style/txt_extra"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/blanco_fondo"
+            android:gravity="center|right"
+            android:onClick="regresar"
+            android:text="@string/regresar"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/azul_barra"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/im_btn_guardado"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/azul_barra"
+                android:onClick="ir_guardados"
+                android:src="@drawable/bookmarks_40px"
+                app:tint="@color/blanco_fondo"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/img_btn_inicio"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/azul_barra"
+                android:onClick="inicio"
+                android:src="@drawable/home_40px"
+                app:tint="@color/blanco_fondo"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/img_btn_buscar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/azul_barra"
+                android:onClick="ir_buscar"
+                android:src="@drawable/search_40px"
+                app:tint="@color/blanco_fondo"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

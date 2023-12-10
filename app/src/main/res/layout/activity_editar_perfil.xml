@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco_fondo"
+    android:orientation="vertical"
+    tools:context=".Editar_perfi">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingTop="36dp"
+        android:paddingRight="36dp">
+
+        <ImageView
+            android:id="@+id/ig_usuario"
+            android:layout_width="328dp"
+            android:layout_height="181dp"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <EditText
+            android:id="@+id/et_nombre_usuario"
+            style="@style/txt_subtitol"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="text"
+            android:text="@string/nombre_usuario" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3.5"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_sitio"
+                style="@style/txt_subtitol"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/sitio_web" />
+
+            <EditText
+                android:id="@+id/et_sitio"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/crema_rellenar"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@string/sitio_web"
+                android:autofillHints="" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="13dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_bio"
+                style="@style/txt_subtitol"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="@string/biografia" />
+
+            <EditText
+                android:id="@+id/et_bio"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/crema_rellenar"
+                android:ems="10"
+                android:inputType="text"
+                android:text="@string/biografia"
+                android:autofillHints="" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <CheckBox
+                android:id="@+id/cb_perfilpriva"
+                style="@style/txt_contenido"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/perfil_pri" />
+
+            <CheckBox
+                android:id="@+id/cb_notificacion"
+                style="@style/txt_contenido"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/notificacion" />
+
+            <CheckBox
+                android:id="@+id/cb_mensajes"
+                style="@style/txt_contenido"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:text="@string/mensajes" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp"
+        android:paddingBottom="36dp">
+
+        <Button
+            android:id="@+id/btn_regresar"
+            style="@style/txt_extra"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/blanco_fondo"
+            android:gravity="center|right"
+            android:onClick="regresar"
+            android:text="@string/regresar"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/azul_barra"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/im_btn_guardado"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/azul_barra"
+                android:onClick="ir_guardados"
+                android:src="@drawable/bookmarks_40px"
+                app:tint="@color/blanco_fondo"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/img_btn_inicio"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/azul_barra"
+                android:onClick="inicio"
+                android:src="@drawable/home_40px"
+                app:tint="@color/blanco_fondo"
+                tools:ignore="SpeakableTextPresentCheck" />
+
+            <ImageButton
+                android:id="@+id/img_btn_buscar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/azul_barra"
+                android:onClick="ir_buscar"
+                android:src="@drawable/search_40px"
+                app:tint="@color/blanco_fondo"
+                tools:ignore="SpeakableTextPresentCheck" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

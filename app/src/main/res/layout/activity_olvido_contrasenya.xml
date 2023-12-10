@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/azul_fondo_inicio"
+    android:contentDescription="@string/busquedad"
+    android:orientation="vertical"
+    android:padding="36dp"
+    tools:context=".Olvido_contrasenya">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/ig_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="191dp"
+            app:srcCompat="@drawable/ds2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ev_email"
+            style="@style/txt_formulario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="@string/email" />
+
+        <EditText
+            android:id="@+id/et_email"
+            style="@style/txt_formulario_dentro"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:autofillHints=""
+            android:background="@color/crema_rellenar"
+            android:ems="10"
+            android:hint="@string/email"
+            android:inputType="text"
+            android:padding="5dp"
+            tools:ignore="DuplicateSpeakableTextCheck" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="17dp" />
+
+        <Button
+            android:id="@+id/btn_ingresar"
+            style="@style/txt_boton_amarillo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azul_boton"
+            android:gravity="center"
+            android:onClick="ingresar_datos"
+            android:text="@string/Recupera_contra" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="right"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_regresar"
+            style="@style/txt_extra"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/azul_fondo_inicio"
+            android:gravity="right"
+            android:onClick="regresar"
+            android:text="@string/regresar" />
+    </LinearLayout>
+</LinearLayout>

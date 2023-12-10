@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="blanco_fondo">#FFFFFFFF</color>
+    <color name="azul_barra">#16697A</color>
+    <color name="azul_boton">#489FB5</color>
+    <color name="azul_fondo_inicio">#82C0CC</color>
+    <color name="crema_fondo">#EDE7E3</color>
+    <color name="naranja_boton">#CD8521</color>
+    <color name="negro_letra">#000000</color>
+    <color name="crema_rellenar">#EDECEC</color>
+    <color name="verde_letra">#334C31</color>
+    <color name="gris_rellenar">#757575</color>
+</resources>

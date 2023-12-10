@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DienteSabio" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+    <style name="Theme.DienteSabioN" parent="Base.Theme.DienteSabio" >
+    <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">#252727</item>
+        <item name="colorPrimaryVariant">@color/azul_barra</item>
+        <item name="colorTertiary">@color/negro_letra</item>
+    <!-- CUESTIONARIOS -->
+        <item name="colorSecondary"> #252727</item>
+        <item name="colorSecondaryVariant">#252727</item>
+    <!-- BOTONES-->
+        <item name="colorBackgroundFloating"> @color/naranja_boton</item>
+         <item name="colorButtonNormal">@color/azul_boton</item>
+    <!-- Texto-->
+         <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorOnSecondary">@color/verde_letra</item>l
+    </style>
+
+</resources>

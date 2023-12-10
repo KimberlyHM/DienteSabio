@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.DienteSabio" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+    <style name="Theme.DienteSabio" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="colorPrimary">@color/azul_fondo_inicio</item>
+        <item name="colorPrimaryVariant"> @color/azul_barra</item>
+        <item name="colorTertiary">@color/blanco_fondo</item>
+        <!-- CUESTIONARIOS -->
+         <item name="colorSecondary"> @color/crema_rellenar</item>
+        <item name="colorSecondaryVariant">@color/crema_fondo</item>
+        <!-- BOTONES-->
+        <item name="colorBackgroundFloating"> @color/naranja_boton</item>
+        <item name="colorButtonNormal">@color/azul_boton</item>
+         <!-- Texto-->
+        <item name="colorOnPrimary">@color/negro_letra</item>
+        <item name="colorOnSecondary">@color/verde_letra</item>
+         <item name="colorOnTertiary">@color/gris_rellenar</item>
+    </style>
+</resources>

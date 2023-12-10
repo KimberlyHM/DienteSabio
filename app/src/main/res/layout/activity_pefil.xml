@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blanco_fondo"
+    android:orientation="vertical"
+    tools:context=".Pefil">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingTop="36dp"
+        android:paddingRight="36dp">
+
+        <ImageView
+            android:id="@+id/ig_usuario"
+            android:layout_width="match_parent"
+            android:layout_height="201dp"
+            android:background="@color/naranja_boton"
+            android:contentDescription="@string/busquedad"
+            app:srcCompat="@drawable/account_circle_40px" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+
+        <TextView
+            android:id="@+id/tv_nombre_usuario"
+            style="@style/txt_subtitol"
+            android:autofillHints=""
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:gravity="center"
+            android:text="@string/nombre_usuario" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2.5"
+        android:gravity="left"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp">
+
+        <Button
+            android:id="@+id/btn_perfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azul_fondo_inicio"
+            android:contentDescription="@string/perfil"
+            android:gravity="left"
+            android:onClick="datos_usuario"
+            android:text="@string/perfil" />
+
+        <Button
+            android:id="@+id/btn_comentarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blanco_fondo"
+            android:gravity="left"
+            android:onClick="ir_comentarios"
+            android:text="@string/comentarios" />
+
+        <Button
+            android:id="@+id/btn_historial"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azul_fondo_inicio"
+            android:gravity="left"
+            android:onClick="ir_historial"
+            android:text="@string/historial" />
+
+        <Button
+            android:id="@+id/btn_ajustes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/blanco_fondo"
+            android:gravity="left"
+            android:onClick="ir_ajustes"
+            android:text="@string/ajustes" />
+
+        <Button
+            android:id="@+id/btn_politicas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/azul_fondo_inicio"
+            android:gravity="left"
+            android:onClick="ir_politicas"
+            android:text="@string/politicas" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:gravity="right"
+        android:orientation="vertical"
+        android:paddingLeft="36dp"
+        android:paddingRight="36dp"
+        android:paddingBottom="36dp">
+
+        <Button
+            android:id="@+id/btn_regresar"
+            style="@style/txt_extra"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@color/blanco_fondo"
+            android:gravity="center|right"
+            android:onClick="regresar"
+            android:text="@string/regresar" />
+
+    </LinearLayout>
+</LinearLayout>
