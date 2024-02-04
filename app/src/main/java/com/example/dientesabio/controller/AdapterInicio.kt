@@ -17,7 +17,7 @@ class AdapterInicio(private val listaInicio : ArrayList<InicioTemas>) : Recycler
         var inicioId: Int = 0
         var inicioname : TextView = itemView.findViewById(R.id.titulo_item)
         var iniciodesc: TextView = itemView.findViewById(R.id.item_descripcion)
-        //var inicioimagen: ImageView = itemView.findViewById(R.id.imagen_item)
+        var inicioimagen: ImageView = itemView.findViewById(R.id.imagen_item)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -36,7 +36,7 @@ class AdapterInicio(private val listaInicio : ArrayList<InicioTemas>) : Recycler
         holder.inicioId = inicio.id
         holder.inicioname.text = inicio.nombre
         holder.iniciodesc.text = inicio.descripcion
-        //holder.inicioimagen.setImageResource(inicio.imagen)
+        holder.inicioimagen.setImageResource(inicio.imagen)
 
 
         holder.itemView.setOnClickListener {

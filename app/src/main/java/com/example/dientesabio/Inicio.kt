@@ -41,13 +41,13 @@ class Inicio : AppCompatActivity() {
         val bd = admin.writableDatabase
 
         //Obtención de registros
-        val reg = bd.rawQuery("SELECT ID, NOMBRE, DESCRIPCION FROM InicioTemas", null)
+        val reg = bd.rawQuery("SELECT ID, NOMBRE, DESCRIPCION, IMAGEN FROM InicioTemas", null)
 
         //Declaración de variables para guardar los datos de la BD
         var id : Int
         var nombre : String
         var descripcion : String
-        //var imagen : Int
+        var imagen : Int
 
 
         //Recorrer la BD y asignar cada registro a una variable
@@ -56,9 +56,9 @@ class Inicio : AppCompatActivity() {
                 id = reg.getString(0).toInt()
                 nombre = reg.getString(1)
                 descripcion = reg.getString(2)
-               // imagen = reg.getString(3).toInt()
+                imagen = reg.getString(3).toInt()
                 //Agregar variables con valores de la BD al Array que guarda las partidas
-                temasList.add(InicioTemas(id, nombre, descripcion))
+                temasList.add(InicioTemas(id, nombre, descripcion,imagen))
             } while (reg.moveToNext())
         }
         reg.close()
