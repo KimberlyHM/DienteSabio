@@ -60,11 +60,11 @@
 
     <Button
         android:id="@+id/btn_registrar"
-        style="@style/txt_boton"
-        android:layout_width="180dp"
+        style="@style/txt_boton_amarillo"
+        android:layout_width="160dp"
         android:layout_height="60dp"
         android:layout_marginTop="30dp"
-        android:background="@color/crema_rellenar"
+        android:background="@color/naranja_boton"
         android:gravity="center"
         android:onClick="registrar_datos"
         android:text="@string/registro"

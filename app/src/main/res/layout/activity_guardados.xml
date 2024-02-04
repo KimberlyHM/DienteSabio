@@ -33,7 +33,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="56dp"
+            android:layout_height="82dp"
             android:orientation="horizontal">
 
             <EditText
@@ -45,9 +45,9 @@
                 android:autofillHints=""
                 android:contentDescription="@string/busquedad"
                 android:ems="10"
+                android:hint="@string/Busqueda"
                 android:inputType="text"
                 android:minHeight="48dp"
-                android:hint="@string/Busqueda"
                 tools:ignore="EditableContentDescCheck" />
 
             <ImageButton
@@ -149,28 +149,9 @@
             android:text="@string/descargas" />
     </LinearLayout>
 
-    <LinearLayout
+    <Space
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="5"
-        android:gravity="right"
-        android:orientation="vertical"
-        android:paddingLeft="36dp"
-        android:paddingRight="36dp"
-        android:paddingBottom="36dp">
-
-        <Button
-            android:id="@+id/btn_regresar"
-            style="@style/txt_extra"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@color/blanco_fondo"
-            android:gravity="center|right"
-            android:onClick="regresar"
-            android:text="@string/regresar"
-            tools:ignore="TouchTargetSizeCheck" />
-
-    </LinearLayout>
+        android:layout_height="50dp" />
 
     <LinearLayout
         android:layout_width="match_parent"

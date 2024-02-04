@@ -4,6 +4,7 @@
     <string name="ingresar">Ingresar</string>
     <string name="email">Correo Electronico</string>
     <string name="contraseña">Contraseña</string>
+    <string name="confirmar_contraseña">Confirmar contraseña</string>
     <string name="olvido_contra">Olvidaste tu contraseña</string>
     <string name="regresar">Regresar</string>
     <string name="Recupera_contra">Recuperar contraseña</string>

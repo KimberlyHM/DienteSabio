@@ -9,153 +9,110 @@
     tools:context=".Crear_perfil">
 
 
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:paddingLeft="36dp"
-        android:paddingTop="36dp"
-        android:paddingRight="36dp">
+        android:layout_weight="1" >
 
-        <TextView
-            android:id="@+id/ev_nombre"
-            style="@style/txt_formulario"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="@string/nombre_reg" />
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:paddingLeft="36dp"
+            android:paddingTop="36dp"
+            android:paddingRight="36dp">
 
-        <EditText
-            android:id="@+id/et_nombre"
-            style="@style/txt_contenido"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:autofillHints=""
-            android:background="@color/crema_rellenar"
-            android:ems="10"
-            android:hint="@string/nombre_reg"
-            android:inputType="text"
-            android:padding="5dp"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="119dp"
+                android:background="#00FFFFFF"
+                app:srcCompat="@drawable/ds3" />
 
-        <TextView
-            android:id="@+id/ev_apellido"
-            style="@style/txt_formulario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="@string/apellido_reg" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
-        <EditText
-            android:id="@+id/et_apellido"
-            style="@style/txt_contenido"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:autofillHints=""
-            android:background="@color/crema_rellenar"
-            android:ems="10"
-            android:hint="@string/apellido_reg"
-            android:inputType="text"
-            android:padding="5dp"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            <EditText
+                android:id="@+id/et_nombre"
+                style="@style/txt_contenido"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:autofillHints=""
+                android:background="@color/crema_rellenar"
+                android:ems="10"
+                android:hint="@string/nombre_reg"
+                android:inputType="text"
+                android:padding="5dp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
-        <TextView
-            android:id="@+id/ev_email"
-            style="@style/txt_formulario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="@string/email" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
-        <EditText
-            android:id="@+id/et_email"
-            style="@style/txt_contenido"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:autofillHints=""
-            android:background="@color/crema_rellenar"
-            android:ems="10"
-            android:hint="@string/email"
-            android:inputType="text"
-            android:padding="5dp"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            <EditText
+                android:id="@+id/et_email"
+                style="@style/txt_contenido"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:autofillHints=""
+                android:background="@color/crema_rellenar"
+                android:ems="10"
+                android:hint="@string/email"
+                android:inputType="text"
+                android:padding="5dp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
-        <TextView
-            android:id="@+id/tv_contra"
-            style="@style/txt_formulario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="@string/contraseña" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
-        <EditText
-            android:id="@+id/et_contra"
-            style="@style/txt_contenido"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:autofillHints=""
-            android:background="@color/crema_rellenar"
-            android:ems="10"
-            android:hint="@string/contraseña"
-            android:inputType="textPassword"
-            android:padding="5dp"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            <EditText
+                android:id="@+id/et_contra"
+                style="@style/txt_contenido"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:autofillHints=""
+                android:background="@color/crema_rellenar"
+                android:ems="10"
+                android:hint="@string/contraseña"
+                android:inputType="textPassword"
+                android:padding="5dp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
-        <TextView
-            android:id="@+id/tv_rein_contra"
-            style="@style/txt_formulario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="@string/contra_reg" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="30dp" />
 
-        <EditText
-            android:id="@+id/et_rein_contra"
-            style="@style/txt_contenido"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:autofillHints=""
-            android:background="@color/crema_rellenar"
-            android:ems="10"
-            android:hint="@string/contraseña"
-            android:inputType="textPassword"
-            android:padding="5dp"
-            tools:ignore="DuplicateSpeakableTextCheck" />
+            <EditText
+                android:id="@+id/et_contra2"
+                style="@style/txt_contenido"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:autofillHints=""
+                android:background="@color/crema_rellenar"
+                android:ems="10"
+                android:hint="@string/confirmar_contraseña"
+                android:inputType="textPassword"
+                android:padding="5dp"
+                tools:ignore="DuplicateSpeakableTextCheck" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="30dp" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="60dp" />
 
-        <Button
-            android:id="@+id/btn_registrar_datos"
-            style="@style/txt_boton_amarillo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="fill_vertical|end"
-            android:background="@color/azul_boton"
-            android:gravity="center"
-            android:onClick="elegir_perfil"
-            android:text="@string/registro" />
-    </LinearLayout>
+            <Button
+                android:id="@+id/btn_agregar_usuario"
+                style="@style/txt_boton_amarillo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="fill_vertical|end"
+                android:background="@color/azul_boton"
+                android:gravity="center"
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="7"
-        android:gravity="right"
-        android:orientation="vertical"
-        android:paddingLeft="36dp"
-        android:paddingRight="36dp">
+                android:text="@string/registro" />
+        </LinearLayout>
+    </ScrollView>
 
-        <Button
-            android:id="@+id/btn_regresar"
-            style="@style/txt_extra"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@color/azul_fondo_inicio"
-            android:gravity="right"
-            android:onClick="regresar"
-            android:text="@string/regresar" />
-    </LinearLayout>
 </LinearLayout>

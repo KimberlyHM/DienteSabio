@@ -29,22 +29,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_weight="2"
-        android:gravity="center"
+        android:gravity="start"
         android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/ev_email"
-            style="@style/txt_formulario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:text="@string/email" />
 
         <EditText
             android:id="@+id/et_email"
             style="@style/txt_formulario_dentro"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_height="60dp"
             android:autofillHints=""
             android:background="@color/crema_rellenar"
             android:ems="10"
@@ -55,7 +48,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="17dp" />
+            android:layout_height="47dp" />
 
         <Button
             android:id="@+id/btn_ingresar"
@@ -67,23 +60,7 @@
             android:onClick="ingresar_datos"
             android:text="@string/Recupera_contra" />
 
+
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:gravity="right"
-        android:orientation="vertical">
-
-        <Button
-            android:id="@+id/btn_regresar"
-            style="@style/txt_extra"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@color/azul_fondo_inicio"
-            android:gravity="right"
-            android:onClick="regresar"
-            android:text="@string/regresar" />
-    </LinearLayout>
 </LinearLayout>

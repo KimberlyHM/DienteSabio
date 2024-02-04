@@ -97,25 +97,6 @@
             android:text="@string/politicas" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="3"
-        android:gravity="right"
-        android:orientation="vertical"
-        android:paddingLeft="36dp"
-        android:paddingRight="36dp"
-        android:paddingBottom="36dp">
 
-        <Button
-            android:id="@+id/btn_regresar"
-            style="@style/txt_extra"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@color/blanco_fondo"
-            android:gravity="center|right"
-            android:onClick="regresar"
-            android:text="@string/regresar" />
 
-    </LinearLayout>
 </LinearLayout>

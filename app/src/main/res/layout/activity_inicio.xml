@@ -84,40 +84,18 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="2"
+        android:layout_height="674dp"
+        android:layout_weight="2.5"
         android:orientation="vertical"
         android:paddingLeft="36dp"
         android:paddingRight="36dp">
 
-        <Button
-            android:id="@+id/btn_maxilar"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/lista_maxilar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/maxilar" />
+            android:layout_height="303dp"
+            android:background="@color/crema_rellenar" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="25dp" />
-
-        <Button
-            android:id="@+id/btn_mandibula"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/mandibula" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="25dp" />
-
-        <Button
-            android:id="@+id/btn_cuello"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:text="@string/cuello" />
     </LinearLayout>
 
     <LinearLayout
@@ -151,6 +129,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:background="@color/azul_barra"
+                android:onClick="inicio"
                 android:src="@drawable/home_40px"
                 app:tint="@color/blanco_fondo"
                 tools:ignore="SpeakableTextPresentCheck" />
