@@ -10,13 +10,16 @@ import com.example.dientesabio.controller.AdapterInicio
 import com.example.dientesabio.data.InicioTemas
 
 class Inicio : AppCompatActivity() {
+
     private lateinit var adapterInicio: AdapterInicio
-    private lateinit var recycledView: RecyclerView
+    lateinit var recycledView: RecyclerView
+
+    //para guardar los temas
+    //lateinit var datosTemas: InicioTemas
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_inicio)
-
-        lateinit var datostema : Inicio
+        //datosTemas = intent.getParcelableExtra("datosTemas")!!
     }
 
     override fun onStart() {
@@ -29,21 +32,27 @@ class Inicio : AppCompatActivity() {
         recycledView.adapter = adapterInicio
 
 
+        adapterInicio.onItemClick= {
+            val intent = Intent (this, InicioDetalle::class.java).apply{}
+
+            intent.putExtra("datosTemas", it)
+            startActivity(intent)
+        }
 
     }
     fun getTemasList() : ArrayList<InicioTemas>{
 
-        //Array para almacenar las partidas
+
         val temasList : ArrayList<InicioTemas> = ArrayList()
 
         //Acceso a la base de datos
         val admin = BaseDatosApp(this, "bd", null, 1)
         val bd = admin.writableDatabase
 
-        //Obtención de registros
+
         val reg = bd.rawQuery("SELECT ID, NOMBRE, DESCRIPCION, IMAGEN FROM InicioTemas", null)
 
-        //Declaración de variables para guardar los datos de la BD
+
         var id : Int
         var nombre : String
         var descripcion : String
@@ -57,7 +66,7 @@ class Inicio : AppCompatActivity() {
                 nombre = reg.getString(1)
                 descripcion = reg.getString(2)
                 imagen = reg.getString(3).toInt()
-                //Agregar variables con valores de la BD al Array que guarda las partidas
+
                 temasList.add(InicioTemas(id, nombre, descripcion,imagen))
             } while (reg.moveToNext())
         }

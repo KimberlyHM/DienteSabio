@@ -23,42 +23,55 @@ class Crear_perfil : AppCompatActivity() {
         val btnAgregarUsuario = findViewById<Button>(R.id.btn_agregar_usuario)
 
         btnAgregarUsuario.setOnClickListener{
+            if (nombre.text.isNotEmpty() && email.text.isNotEmpty() && pass1.text.isNotEmpty() && pass2.text.isNotEmpty()) {
 
-            val admin = BaseDatosApp(this, "bd", null, 1)
-            val bd = admin.writableDatabase
-            val reg = ContentValues()
+                if(pass1.text.toString() == pass2.text.toString()){
+                // Verificar que el correo electrónico tenga un @
+                    if ('@' in email.text) {
+                        // Verificar si el correo electrónico ya está en la base de datos
+                        val admin = BaseDatosApp(this, "bd", null, 1)
+                        val bd = admin.readableDatabase
+                        val cursor = bd.rawQuery("SELECT * FROM Usuarios WHERE EMAIL=?", arrayOf(email.text.toString()))
+                        if (cursor.count == 0) {
+                            // El correo electrónico no está en la base de datos, continuar con el registro
+                            Toast.makeText(this, "¡El usuario se ha agregado correctamente!", Toast.LENGTH_SHORT).show()
+                            val reg = ContentValues()
 
-            reg.put("NOMBRE", nombre.text.toString())
-            reg.put("EMAIL", email.text.toString())
-            if(pass1.text.toString() == pass2.text.toString()) {
+                            reg.put("NOMBRE", nombre.text.toString())
+                            reg.put("EMAIL", email.text.toString())
+                            reg.put("PASSWORD", pass1.text.toString())
 
-                reg.put("PASSWORD", pass1.text.toString())
-                Toast.makeText(
-                    this,
-                    "¡El usuario se ha agregado correctamente!",
-                    Toast.LENGTH_SHORT
-                ).show()
+                            bd.insert("Usuarios", null, reg)
+                            bd.close()
+
+                            nombre.setText("")
+                            email.setText("")
+                            pass1.setText("")
 
 
-                bd.insert("Usuarios", null, reg)
-                bd.close()
-
-                nombre.setText("")
-                email.setText("")
-                pass1.setText("")
-                pass2.setText("")
-
-                val intent = Intent(this, Elegir_perfil::class.java)
-                startActivity(intent)
+                            val intent = Intent(this, Elegir_perfil::class.java)
+                            startActivity(intent)
+                        } else {
+                            // El correo electrónico ya está en la base de datos
+                            Toast.makeText(this, "¡El correo electrónico ya está registrado!", Toast.LENGTH_SHORT).show()
+                        }
+                        cursor.close()
+                    } else {
+                        // El correo electrónico no contiene @
+                        Toast.makeText(this, "¡El correo electrónico no es válido!", Toast.LENGTH_SHORT).show()
+                    }
+                } else {
+                    // Las contraseñas no coinciden
+                    Toast.makeText(this, "¡Las contraseñas no coinciden!", Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                // Al menos uno de los campos está vacío
+                Toast.makeText(this, "¡Por favor completa todos los campos!", Toast.LENGTH_SHORT).show()
             }
-            else{Toast.makeText(
-                this,
-                "¡Las contraseñas no coinciden!",
-                Toast.LENGTH_SHORT
-            ).show()}
+        }
         }
 
-    }
+
 
 
 

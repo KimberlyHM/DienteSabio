@@ -64,8 +64,8 @@
                 android:contentDescription="@string/busquedad"
                 android:ems="10"
                 android:inputType="text"
+                android:hint="@string/Busqueda"
                 android:minHeight="48dp"
-                android:text="@string/Busqueda"
                 tools:ignore="EditableContentDescCheck" />
 
             <ImageButton
@@ -85,15 +85,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="674dp"
-        android:layout_weight="2.5"
+        android:layout_weight="2"
         android:orientation="vertical"
         android:paddingLeft="36dp"
         android:paddingRight="36dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/lista_maxilar"
-            android:layout_width="match_parent"
-            android:layout_height="303dp"
+            android:layout_width="352dp"
+            android:layout_height="327dp"
             android:background="@color/crema_rellenar" />
 
     </LinearLayout>

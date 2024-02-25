@@ -28,7 +28,7 @@ class AdapterInicio(private val listaInicio : ArrayList<InicioTemas>) : Recycler
     override fun getItemCount(): Int {
         return listaInicio.size
     }
-    private val onItemClick : ((InicioTemas) -> Unit)? = null
+     var onItemClick : ((InicioTemas) -> Unit)? = null
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
         val inicio = listaInicio[position]
