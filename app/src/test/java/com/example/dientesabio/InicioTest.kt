@@ -6,57 +6,53 @@ import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
+import androidx.test.ext.junit.runners.AndroidJUnit4
+import com.example.dientesabio.controller.AdapterInicio
 import org.junit.Test
 
 import org.junit.Assert.*
 import org.junit.Before
+import org.junit.Rule
 import org.junit.runner.RunWith
 import org.mockito.Mock
 import org.mockito.Mockito.*
 import org.mockito.junit.MockitoJUnitRunner
 
-
-
-
-
 @RunWith(MockitoJUnitRunner::class)
 class InicioTest {
 
-        @Mock
-        lateinit var mockInicio: Inicio
+    private lateinit var inicio: Inicio
 
+    @Mock
+    private lateinit var mockRecyclerView: RecyclerView
 
-        @Before
-        fun setUp() {
-            mockInicio = Inicio()
-        }
+    @Mock
+    private lateinit var mockAdapterInicio: AdapterInicio
 
-
-
+    @Before
+    fun setup() {
+        inicio = Inicio()
+        inicio.recycledView = mockRecyclerView
+        inicio.adapterInicio = mockAdapterInicio
+    }
 
     @Test
     fun testInicio() {
-        // Mock del contexto y del intent
+        val contextMock = mock(Context::class.java)
         val viewMock = mock(View::class.java)
+        `when`(viewMock.context).thenReturn(contextMock)
         val intentMock = mock(Intent::class.java)
 
-        // Crear una instancia de Inicio y llamar al método inicio()
-        val inicio = Inicio()
         inicio.inicio(viewMock)
 
-        // Verificar que se llame a startActivity() con el intent correcto
-        verify(viewMock.context).startActivity(intentMock)
+        verify(contextMock).startActivity(intentMock)
     }
 
-
-     @Test
-     fun testDatosUsuarioa() {
-        // Mock del contexto y del intent
+    @Test
+    fun testDatosUsuario() {
         val viewMock = mock(View::class.java)
         val intentMock = mock(Intent::class.java)
 
-        // Crear una instancia de Inicio y llamar al método datos_usuario()
-        val inicio = Inicio()
         inicio.datos_usuario(viewMock)
 
         // Verificar que se llame a startActivity() con el intent correcto
@@ -65,38 +61,37 @@ class InicioTest {
 
 
 
-    @Test
-    fun testGetTemasList() {
-        // Crear un mock de la base de datos
-        val baseDatosMock = mock(BaseDatosApp::class.java)
-
-        // Crear un mock del cursor que devuelve la consulta a la base de datos
-        val cursorMock = mock(Cursor::class.java)
-        `when`(cursorMock.moveToFirst()).thenReturn(true)
-        `when`(cursorMock.getString(0)).thenReturn("1")
-        `when`(cursorMock.getString(1)).thenReturn("Tema 1")
-        `when`(cursorMock.getString(2)).thenReturn("Descripción del tema 1")
-        `when`(cursorMock.getString(3)).thenReturn("imagen_tema_1")
-
-        // Configurar el comportamiento del mock de la base de datos
-        `when`(baseDatosMock.writableDatabase).thenReturn(mock(SQLiteDatabase::class.java))
-        `when`(baseDatosMock.writableDatabase.rawQuery("SELECT ID, NOMBRE, DESCRIPCION, IMAGEN FROM InicioTemas", null)).thenReturn(cursorMock)
-
-        // Crear una instancia de la clase Inicio
-        val inicio = Inicio()
-
-        // Llamar al método que queremos probar y pasarle el mock de la base de datos
-        val result = inicio.getTemasList()
-
-        // Verificar que el resultado no sea nulo y tenga el tamaño esperado
-        assertNotNull(result)
-        assertEquals(1, result.size)
-    }
 
 
 
 
+        @Test
+        fun testGetTemasList() {
+            // Mock de la base de datos
+            val mockAdmin = mock(BaseDatosApp::class.java)
+            val mockBd = mock(SQLiteDatabase::class.java)
+            `when`(mockAdmin.writableDatabase).thenReturn(mockBd)
 
+            // Mock de los resultados de la consulta
+            val mockCursor = mock(Cursor::class.java)
+            `when`(mockBd.rawQuery("SELECT ID, NOMBRE, DESCRIPCION, IMAGEN FROM InicioTemas", null))
+                .thenReturn(mockCursor)
+            `when`(mockCursor.moveToFirst()).thenReturn(true, false)
+            `when`(mockCursor.getString(0)).thenReturn("1")
+            `when`(mockCursor.getString(1)).thenReturn("Tema de prueba")
+            `when`(mockCursor.getString(2)).thenReturn("Descripción de prueba")
+            `when`(mockCursor.getString(3)).thenReturn("123")
+
+            // Crear instancia de Inicio y llamar al método
+            val inicio = Inicio()
+            val temasList = inicio.getTemasList()
+
+            // Verificar que la lista se ha creado correctamente
+            assertEquals(1, temasList.size)
+            assertEquals("Tema de prueba", temasList[0].nombre)
+            assertEquals("Descripción de prueba", temasList[0].descripcion)
+            assertEquals(123, temasList[0].imagen)
+        }
 }
 
 

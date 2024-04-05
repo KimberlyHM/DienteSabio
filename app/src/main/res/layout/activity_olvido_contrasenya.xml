@@ -13,7 +13,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2"
+        android:layout_weight="1.5"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -28,7 +28,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="2"
+        android:layout_weight="1.5"
         android:gravity="start"
         android:orientation="vertical">
 
@@ -48,7 +48,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="47dp" />
+            android:layout_height="40dp" />
 
         <Button
             android:id="@+id/btn_ingresar"

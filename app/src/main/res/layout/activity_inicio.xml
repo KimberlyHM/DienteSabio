@@ -47,7 +47,7 @@
 
         <Space
             android:layout_width="match_parent"
-            android:layout_height="23dp" />
+            android:layout_height="20dp" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,8 +63,8 @@
                 android:autofillHints=""
                 android:contentDescription="@string/busquedad"
                 android:ems="10"
-                android:inputType="text"
                 android:hint="@string/Busqueda"
+                android:inputType="text"
                 android:minHeight="48dp"
                 tools:ignore="EditableContentDescCheck" />
 
@@ -85,15 +85,15 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="674dp"
-        android:layout_weight="2"
+        android:layout_weight="3"
         android:orientation="vertical"
         android:paddingLeft="36dp"
         android:paddingRight="36dp">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/lista_maxilar"
-            android:layout_width="352dp"
-            android:layout_height="327dp"
+            android:layout_width="339dp"
+            android:layout_height="272dp"
             android:background="@color/crema_rellenar" />
 
     </LinearLayout>
